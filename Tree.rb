@@ -22,4 +22,32 @@ class Tree
 
     return root
   end
+
+  def find(root, val)
+    if root.nil? || root.data == val
+      return root
+    end
+
+    if root.data < val
+      return find(root.right, val)
+    end
+
+    return find(root.left, val)
+  end
+
+  def insert(root, val)
+    if root.nil?
+      return Node.new(val)
+    else
+      if root.data == val
+        return root
+      elsif root.data < val
+        root.right = insert(root.right, val)
+      else
+        root.left = insert(root.left, val)
+      end
+      return root
+    end
+  end
+
 end

@@ -10,9 +10,32 @@ test = Tree.new([1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324])
 # test = Tree.new([1, 2, 3, 4, 5, 6, 7])
 # test = Tree.new([10, 20, 30, 100, 500])
 pretty_print(test.root)
-# p test.find(test.root, 23)
-puts "\nInserting: 44"
+
+p test.find(test.root, 23)
+
+puts "\nInserting: 68"
 test.insert(test.root, 68)
+puts "Inserting: 99"
 test.insert(test.root, 99)
+puts "Inserting: 45"
 test.insert(test.root, 45)
+puts "unbalanced"
+pretty_print(test.root)
+test.rebalance
+puts "balanced"
+pretty_print(test.root)
+
+# puts "\nDeleting: 8"
+# test.delete(test.root, 8)
+# pretty_print(test.root)
+
+puts "\nIterative inorder"
+test.inorder_iter(test.root)
+
+# puts "\nDeleting: 3"
+# test.delete(test.root, 3)
+# pretty_print(test.root)
+deletenum = 6345
+puts "deleting #{deletenum}"
+test.delete_iter(test.root, deletenum)
 pretty_print(test.root)

@@ -56,7 +56,7 @@ class Tree
   end
 
   def next_min_value_node(node)
-    current = node
+    current = node.right
     while current.left != nil
       current = current.left
     end
@@ -159,8 +159,6 @@ class Tree
   end
 
   def delete_iter(root, val)
-    # Missing Conditions
-    # Not complete
     return if root.nil?
     
     if root.data == val
@@ -191,6 +189,11 @@ class Tree
           parent_node.right = to_delete_node.right
         end
         # Two children
+      else
+        replace_node = self.next_min_value_node(to_delete_node)
+        new_data = replace_node.data
+        self.delete_iter(@root, replace_node.data)
+        to_delete_node.data = new_data
       end
     end
   end

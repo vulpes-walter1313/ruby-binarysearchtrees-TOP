@@ -162,7 +162,10 @@ class Tree
     return if root.nil?
     
     if root.data == val
-      # Code
+      replace_node = self.next_min_value_node(root)
+      new_data = replace_node.data
+      self.delete_iter(@root, replace_node.data)
+      root.data = new_data
     else
       res = self.parent_deleteNode(val)
       parent_node = res[:parent]

@@ -75,3 +75,9 @@ else
   to_delete_node.data = new_data
 end
 ```
+
+## level_order_iter
+This method prints out the breadth-first level-order traversal of the tree starting from the `@root`. It is an iterative method that utilizes a stack
+
+## preorder_iter(root)
+This method prints out the pre-order travesal from root. Preorder is `print-left-right`.

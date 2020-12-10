@@ -210,7 +210,6 @@ class Tree
       puts current.data
       queue.push(current.left) if current.left != nil
       queue.push(current.right) if current.right != nil
-      # break if queue.empty?
     end
   end
 

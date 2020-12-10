@@ -200,5 +200,18 @@ class Tree
       end
     end
   end
+
+  def level_order
+    queue = []
+    current = @root
+    queue.push(current)
+    while true
+      current = queue.shift
+      puts current.data
+      queue.push(current.left) if current.left != nil
+      queue.push(current.right) if current.right != nil
+      break if queue.empty?
+    end
+  end
   
 end

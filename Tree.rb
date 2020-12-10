@@ -201,7 +201,7 @@ class Tree
     end
   end
 
-  def level_order
+  def level_order_iter
     queue = []
     current = @root
     queue.push(current)
@@ -211,6 +211,18 @@ class Tree
       queue.push(current.left) if current.left != nil
       queue.push(current.right) if current.right != nil
       break if queue.empty?
+    end
+  end
+
+  def preorder_iter(root)
+    return if root.nil?
+    stack = []
+    stack.push(root)
+    while stack.empty? == false
+      current = stack.pop
+      puts current.data
+      stack.push(current.right) if current.right != nil
+      stack.push(current.left) if current.left != nil
     end
   end
   

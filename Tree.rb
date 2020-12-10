@@ -205,12 +205,12 @@ class Tree
     queue = []
     current = @root
     queue.push(current)
-    while true
+    while queue.empty? == false
       current = queue.shift
       puts current.data
       queue.push(current.left) if current.left != nil
       queue.push(current.right) if current.right != nil
-      break if queue.empty?
+      # break if queue.empty?
     end
   end
 

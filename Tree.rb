@@ -225,4 +225,28 @@ class Tree
     end
   end
   
+  def postorder_iter(root)
+    return if root.nil?
+    stack = []
+    while true
+      while root
+        if root.right.nil? == false
+          stack.push(root.right)
+        end
+        stack.push(root)
+        root = root.left
+      end
+      root = stack.pop
+      if root.right != nil && stack[-1] == root.right
+        stack.pop
+        stack.push(root)
+        root = root.right
+      else
+        puts root.data
+        root = nil
+      end
+      break if stack.empty?
+    end
+  end
+
 end

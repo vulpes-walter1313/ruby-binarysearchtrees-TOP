@@ -249,4 +249,13 @@ class Tree
     end
   end
 
+  def inorder(root)
+    if root.nil?
+      return
+    end
+    self.inorder(root.left)
+    puts root.data
+    self.inorder(root.right)
+  end
+
 end

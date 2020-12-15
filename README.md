@@ -52,8 +52,6 @@ This method is a helper method that returns the next minimum value in the right 
 ## delete(root, val)
 This method is not finished. This is an attempt to delete nodes recursively. It has a strange behaviour of deleting a whole host of nodes I do not intend to delete. Will keep trying to find my mistake.
 
-## inorder_iter(root, rtflag=false)
-This method has adjustable functionality. In it's default mode, ignoring rtflag, it simply prints all the values in the tree from the `root` start point to the console. However if `rtflag=true`, it modifies it's behaviour to return an array of the values found in the tree starting from `root`. This `rtflag=true` functionality comes in handy inside the `rebalance` method.
 
 ## parent_deleteNode(toDeleteVal)
 This method return one of the following:
@@ -81,3 +79,9 @@ This method prints out the breadth-first level-order traversal of the tree start
 
 ## preorder_iter(root)
 This method prints out the pre-order travesal from root. Preorder is `print-left-right`.
+
+## inorder_iter(root, rtflag=false)
+This method has adjustable functionality. In it's default mode, ignoring rtflag, it simply prints all the values in the tree from the `root` start point to the console. However if `rtflag=true`, it modifies it's behaviour to return an array of the values found in the tree starting from `root`. This `rtflag=true` functionality comes in handy inside the `rebalance` method.
+
+## postorder_iter(root)
+This method prints out the postorder travesal from root iteratively.

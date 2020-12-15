@@ -257,5 +257,14 @@ class Tree
     puts root.data
     self.inorder(root.right)
   end
+  
+  def preorder(root)
+    if root.nil?
+      return
+    end
+    puts root.data
+    self.inorder(root.left)
+    self.inorder(root.right)
+  end
 
 end

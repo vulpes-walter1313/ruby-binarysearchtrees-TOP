@@ -276,4 +276,13 @@ class Tree
     puts root.data
   end
 
+  def height(root)
+    return -1 if root.nil?
+
+    left_height = height(root.left)
+    right_height = height(root.right)
+
+    return [left_height, right_height].max + 1
+  end
+
 end

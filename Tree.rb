@@ -294,4 +294,24 @@ class Tree
     return false
   end
 
+  def depth(node)
+    count = 0
+    current_node = @root
+    while true
+      if current_node.nil?
+        break
+      elsif node.data == current_node.data
+        return count
+      elsif node.data > current_node.data 
+        count += 1
+        current_node = current_node.right
+      elsif node.data < current_node.data
+        count += 1
+        current_node = current_node.left
+      end
+
+    end
+    return count
+  end
+
 end

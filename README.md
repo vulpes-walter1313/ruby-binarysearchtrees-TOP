@@ -1,7 +1,7 @@
 # ruby-binarysearchtrees-TOP
 My work in Binary Search Trees Project from The Odin Project.
 
-# Tree M ethods
+# Tree Class
 
 ## initialize
 The initialize method for three is very simple. It takes in an array of values that will be sorted and made uniq then it will call the method `build_tree` to create a balanced binary tree and return the top-level root node.
@@ -85,3 +85,33 @@ This method has adjustable functionality. In it's default mode, ignoring rtflag,
 
 ## postorder_iter(root)
 This method prints out the postorder travesal from root iteratively.
+
+## inorder(root)
+This is a recursive function to print out the inorder traversal of the tree.
+
+## preorder(root)
+This is a recursive function to print out the preorder traversal of a tree.
+
+## postorder(root)
+This is a recursive function to print out the postorder traversal of a tree.
+
+## height(root)
+This recursive method gets the height of a node. That is it returns a number of the number of levels from the node input to the longest leaf node from the starting node. By leaf node i mean a node that has no children.
+
+## depth(node)
+This iterative method takes in a node and returns the number (as integer) of it's depth within the tree.
+
+# Node Class
+
+## initialize(data)
+
+```Ruby
+class Node
+  attr_accessor :left, :right, :data
+  def initialize(data)
+    @data = data
+    @left = nil
+    @right = nil
+  end
+end
+```

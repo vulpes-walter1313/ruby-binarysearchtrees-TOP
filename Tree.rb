@@ -278,11 +278,20 @@ class Tree
 
   def height(root)
     return -1 if root.nil?
-
     left_height = height(root.left)
     right_height = height(root.right)
-
     return [left_height, right_height].max + 1
+  end
+
+  def balanced?(root)
+    return true if root.nil?
+    l_h = self.height(root.left)
+    r_h = self.height(root.right)
+    puts "abs height: #{(l_h - r_h).abs}"
+    if (r_h - l_h).abs <= 1
+      return true
+    end  
+    return false
   end
 
 end

@@ -287,7 +287,7 @@ class Tree
     return true if root.nil?
     l_h = self.height(root.left)
     r_h = self.height(root.right)
-    puts "abs height: #{(l_h - r_h).abs}"
+    # puts "abs height: #{(l_h - r_h).abs}"
     if (r_h - l_h).abs <= 1
       return true
     end  
